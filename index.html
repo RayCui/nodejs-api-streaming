@@ -1,0 +1,16 @@
+<script src="http://127.0.0.1:1337/socket.io/socket.io.js"></script>
+<html>
+<body>
+    <script>
+      var socket = io.connect('http://127.0.0.1:1337');
+      socket.on('news', function (data) {
+        var row = document.getElementById("mytable").insertRow(-1);
+        row.innerHTML = data;
+      });
+    </script> 
+    <div id = "data">
+        <table id="mytable"></table>
+    </div>
+</body>
+</html>
+
